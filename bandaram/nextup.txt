@@ -1,0 +1,39 @@
+
+Next Up:
+ + PNG's for arrows (should be pretty easy, right?)
+ + Venues as several objects, not inside an array
+ + PNG for singer
+ + Hover over singer = stats information
+ + Bass and keyboard in upgrades
+ + All instruments in main
+ + Skills for other instruments
+ * refreshPriceTags() instead of refreshInstruments() in cashadd()
+ * Redo design refreshing in general - too many refreshes going on, many can be spared
+ * Make simple functionality for performing - progress-bar, cash-notes, venue-dependant, etc.
+ 
+
+Other ideas:
+ ? Unlock of new band members - how should it work? What should unlock them?
+ ? Drugs
+ ? Popularity
+ ? Fame
+ ? Studio
+ ? How should performing work? All band members unavailbe while performing maybe? All gain different amounts of exp?
+ ? How should recording work? Maybe a bit like performing. Grab the paper and pencil and figure both out.
+
+
+Think this through (content and balancing):
+ - Upgrades for singer
+ - Upgrades for guitarist
+ - Upgrades for drummer
+ - Upgrades for bass
+ - Upgrades for keyboard
+ - Skills for singer
+ - Skills for guitarist
+ - Skills for drummer
+ - Skills for bass
+ - Skills for keyboard
+ - Venues
+ - Studios
+
+

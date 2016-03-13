@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel='stylesheet' type='text/css' href='style.css'>
+	<link rel='stylesheet' type='text/css' href='scrollbars.css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src='objects.js?1'></script>
+	<script src='script.js?1'></script>
+	<script src='jquery.transit.min.js'></script>
+	<title>Bandaram</title>
+	<link rel='shortcut icon' href='favicon.ico'>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+
+	<div id='game'>
+
+		<div id='egg1'></div>
+		<div id='egg2'></div>
+		<div id='egg3'></div>
+
+		<!-- Top menu -->
+		<div id='top-menu'>
+			<h1 id='title'>Bandaram</h1>
+			<div class='button-box top-menu-item' onclick="$('.window-container').hide()" style="left: 20px;">
+				<p>MAIN</p>
+			</div>
+			<div class='button-box top-menu-item' id='upgrades' style="left: 180px;">
+				<p>UPGRADES</p>
+			</div>
+			<div class='button-box top-menu-item' id='venues' style="left: 340px;">
+				<p>VENUES</p>
+			</div>
+			<div id='cash' style="position: relative">
+				<p>$<span>0</span></p>
+			</div>
+			<div class='button-box top-menu-item' id='studio' style="left: 700px;">
+				<p>STUDIO</p>
+			</div>
+			<div class='button-box top-menu-item' id='skills' style="left: 860px;">
+				<p>SKILLS</p>
+			</div>
+			<div class='button-box top-menu-item' id='fame' style="left: 1020px;">
+				<p>FAME</p>
+			</div>
+		</div>
+
+		<!-- Middle content -->
+		
+		<!-- >> Main screen -->
+		<div class='level' id='level-singer'>
+			<p>Level: <span>0</span></p>
+		</div>
+		<div class='progress-bar exp-bar' id='exp-singer'>
+			<div></div><span></span>
+		</div>
+		<div class='exp-notes' id='exp-notes-singer'></div>
+		<div id='singer'>
+			<p>SINGER</p>
+		</div>
+
+		<!-- >> Upgrade screen -->
+		<div class='window-container' id='upgrades-container'>
+			<span class='container-title'>UPGRADES</span>
+			<div class="close" onclick="$('.window-container').hide()"><span>X</span></div>
+			<div class='window-inner'>
+				<div class='tabs-container'>
+					<div class='tab button-box' id='singer-tab' onclick='game.design.filterTabs("singer")'>Singer</div>
+					<div class='tab button-box' id='guitar-tab' onclick='game.design.filterTabs("guitar")'>Guitar</div>
+					<div class='tab button-box' id='drums-tab' onclick='game.design.filterTabs("drums")'>Drums</div>
+					<div class='tab button-box' id='bass-tab' onclick='game.design.filterTabs("bass")'>Bass</div>
+					<div class='tab button-box' id='keyboard-tab' onclick='game.design.filterTabs("keyboard")'>Keyboard</div>
+				</div>
+				<div id='upgrade-box-container'>
+					<!-- Singer -->
+					<div class='upgrade-box singer-upgrade' id='microphone-upgrades'>
+						<h3></h3>
+						<img>
+						<div class='bonus'>
+							<h4>Current bonus: </h4>
+							<p></p>
+						</div>
+						<span class='pricetag'></span>
+						<span class='reqLvl'></span>
+						<div class='next'>
+							<h4>Next upgrade: </h4>
+							<p></p>
+						</div>
+						<div class='button-box upgrade-button' id='microphone'>BUY</div>
+					</div>
+					<div class='upgrade-box singer-upgrade' id='recorder-upgrades'>
+						<h3></h3>
+						<img>
+						<div class='bonus'>
+							<h4>Current bonus: </h4>
+							<p></p>
+						</div>
+						<span class='pricetag'></span>
+						<span class='reqLvl'></span>
+						<div class='next'>
+							<h4>Next upgrade: </h4>
+							<p></p>
+						</div>
+						<div class='button-box upgrade-button' id='recorder'>BUY</div>
+					</div>
+
+					<!-- Guitar -->
+					<div class='upgrade-box guitar-upgrade' id='guitar-upgrades'>
+						<h3></h3>
+						<img>
+						<div class='bonus'>
+							<h4>Current bonus: </h4>
+							<p></p>
+						</div>
+						<span class='pricetag'></span>
+						<span class='reqLvl'></span>
+						<div class='next'>
+							<h4>Next upgrade: </h4>
+							<p></p>
+						</div>
+						<div class='button-box upgrade-button' id='guitar'>BUY</div>
+					</div>
+
+					<!-- Drums -->
+					<div class='upgrade-box drums-upgrade' id='drums-upgrades'>
+						<h3></h3>
+						<img>
+						<div class='bonus'>
+							<h4>Current bonus: </h4>
+							<p></p>
+						</div>
+						<span class='pricetag'></span>
+						<span class='reqLvl'></span>
+						<div class='next'>
+							<h4>Next upgrade: </h4>
+							<p></p>
+						</div>
+						<div class='button-box upgrade-button' id='drums'>BUY</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- >> Venue screen -->
+		<div class='window-container' id='venues-container'>
+			<span class='container-title'>VENUES</span>
+			<div class="close" onclick="$('.window-container').hide()"><span>X</span></div>
+			<div class='window-inner'>
+				<div id='venue-showcase'>
+					<div class='venue' id='dark-alley'>
+						<h2>Dark Alley</h2>
+						<img src='questionmark.png' alt='Venue Image'>
+						<div class='button-box perform-button'>
+							<p>Perform</p>
+						</div>
+					</div>
+					<div class='venue' id='small-street'>
+						<h2>Small Street</h2>
+						<img src='questionmark.png' alt='Venue Image'>
+						<div class='button-box perform-button'>
+							<p>Perform</p>
+						</div>
+					</div>
+					<div class='venue' id='boulevard'>
+						<h2>Boulevard</h2>
+						<img src='questionmark.png' alt='Venue Image'>
+						<div class='button-box perform-button'>
+							<p>Perform</p>
+						</div>
+					</div>
+				</div>
+				<div class='arrow-left'><img src='' alt='left'></div>
+				<div class='arrow-right'><img src='' alt='right'></div>
+			</div>
+		</div>
+
+		<!-- >> Studio screen -->
+		<div class='window-container' id='studio-container'>
+			<span class='container-title'>STUDIO</span>
+			<div class="close" onclick="$('.window-container').hide()"><span>X</span></div>
+			<div class='window-inner'>
+
+			</div>
+		</div>
+
+		<!-- >> Skill tree -->
+		<div class='window-container' id='skills-container'>
+			<span class='container-title'>SKILLS</span>
+			<div class="close" onclick="$('.window-container').hide()"><span>X</span></div>
+			<div class='window-inner'>
+				<div class='tabs-container'>
+					<div class='tab button-box' id='singer-tab'>Singer</div>
+					<div class='tab button-box' id='guitar-tab'>???</div>
+					<div class='tab button-box' id='drums-tab'>???</div>
+					<div class='tab button-box' id='bass-tab'>???</div>
+					<div class='tab button-box' id='keyboard-tab'>???</div>
+				</div>
+				<div class='skill-tree' id='skills-singer'>
+					<div class='genre rock'>
+						<h4>Rock</h4>
+						<div class='attributes' id='vibrato'>
+							<p>Vibrato: </p><span>0</span>
+							<div class='skillpointsplus breathing-button' id='singer-vibrato'><span>+</span></div>
+						</div>
+						<div class='attributes' id='dancemoves'>
+							<p>Dance Moves: </p><span>0</span>
+							<div class='skillpointsplus breathing-button' id='singer-dancemoves'><span>+</span></div>
+						</div>
+					</div>
+					<div class='genre blues'>
+						<h4>Blues</h4>
+						<div class='attributes' id='intonation'>
+							<p>Intonation: </p><span>0</span>
+							<div class='skillpointsplus breathing-button' id='singer-intonation'><span>+</span></div>
+						</div>
+						<div class='attributes' id='rhythm'>
+							<p>Rhythm: </p><span>0</span>
+							<div class='skillpointsplus breathing-button' id='singer-rhythm'><span>+</span></div>
+						</div>
+					</div>
+					<div class='genre jazz'>
+						<h4>Jazz</h4>
+					</div>
+					<div class='tip' id='skills-tip'><span>Tip:</span>
+						<p>*Hover over a skill to see a description and what bonuses it gives*</p>
+					</div>
+					<p class='skillpoints' id='upgrade-skills'>Skillpoints: <span></span></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- >> Fame screen -->
+		<div class='window-container' id='fame-container'>
+			<span class='container-title'>FAME</span>
+			<div class="close" onclick="$('.window-container').hide()"><span>X</span></div>
+			<div class='window-inner'>
+
+			</div>
+		</div>
+
+		<!-- Bottom stuff -->
+		<div id='bottom-section'>
+			<div class='bottom-buttons' id='singer-buttons'>
+				<div class='button-box practice-button'>
+					<div class='practice-bar'></div>
+					<p>Practice</p>
+				</div>
+				<div style="top:80px">
+					*Put information for practicing here*
+				</div>
+				<div class='venue-text' style="position:absolute;">
+					<p><u>Venue: <span></span></u></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

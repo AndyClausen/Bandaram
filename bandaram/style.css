@@ -1,0 +1,699 @@
+/* Body/outer */
+
+body {
+	background-color: black;
+	font-family: 'Lucida Sans Typewriter', "Lucida Console", Monaco, monospace;
+	text-align: center;
+}
+
+#game {
+	width: 1200px;
+	height: 800px;
+	border: green solid 2px;
+	margin: auto;
+	background: #151515;
+	position: relative;
+}
+
+#game div {
+	position: absolute;
+}
+
+
+/* --General-- */
+
+
+/* Tips */
+
+.tip {
+	width: 300px;
+	height: 102px;
+	color: #000;
+	padding: 2px;
+	text-align: justify;
+	font-weight: bold;
+}
+
+.tip p {
+	font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 16px;
+	color: #aaa;
+	margin-top: 7px;
+}
+
+.tip p span {
+	font-family: "Times New Roman", Times, serif;
+	font-style: normal;
+	font-size: 16px;
+	color: #bb8;
+}
+
+.tip > span {
+	font-family: Verdana, Geneva, sans-serif;
+	border-bottom: 1px solid black;
+	font-size: 18px;
+}
+
+/* Button divs */
+
+.button-box {
+	border: #333 solid 1px;
+	background-color: #252525;
+}
+
+.button-box:hover {
+	background-color: #454545;
+	cursor: pointer;
+}
+
+
+/* Custom Animations */
+
+.breathing-button {
+	-webkit-animation: breathing 2s ease-out infinite normal;
+	animation: breathing 2s ease-out infinite normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-animation-name: whitePulse;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes breathing {
+	0% {
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+	25% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	60% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	100% {
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+}
+
+@keyframes breathing {
+	0% {
+		-webkit-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+	25% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+	60% {
+		-webkit-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	100% {
+		-webkit-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+}
+
+@-webkit-keyframes whitePulse {
+	from {
+		-webkit-box-shadow: 0 0 7px #888;
+		box-shadow: 0 0 7px #888;
+	}
+	50% {
+		-webkit-box-shadow: 0 0 9px #ddd;
+		box-shadow: 0 0 9px #ddd;
+	}
+	to {
+		-webkit-box-shadow: 0 0 7px #888;
+		box-shadow: 0 0 7px #888;
+	}
+}
+
+.level-up {
+	-webkit-animation-name: blueGlow;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blueGlow {
+	from {
+		text-shadow: 0 0 4px #0ff;
+	}
+	5% {
+		text-shadow: 0 0 16px #0ff, 0 0 16px #0ff;
+	}
+	20% {
+		text-shadow: 0 0 8px #0ff, 0 0 8px #0ff;
+	}
+	40% {
+		text-shadow: 0 0 20px #0ff, 0 0 20px #0ff;
+	}
+	50% {
+		text-shadow: 0 0 8px #0ff,  0 0 8px #0ff;
+	}
+	80% {
+		text-shadow: 0 0 16px #0ff, 0 0 16px #0ff;
+	}
+	90% {
+		text-shadow: 0 0 25px #0ff, 0 0 25px #0ff;
+	}
+	98% {
+		text-shadow: 0 0 200px #0af, 0 0 200px #0af;
+	}
+	to {
+		text-shadow: 0 0 500px #0af;
+	}
+}
+
+
+/* --Game content-- */
+
+
+/* Top */
+
+#top-menu {
+	border-bottom: 2px solid black;
+	width: 100%;
+	height: 150px;
+	background-color: #1a1a1a;
+	top: 0;
+}
+
+.top-menu-item {
+	width: 160px;
+	height: 50px;
+	top: 80px;
+}
+
+.top-menu-item:hover {
+	border-bottom: 1px solid green;
+}
+
+#title {
+	color: green;
+}
+
+#cash {
+	color: #0a0;
+	font-size: 24px;
+	text-shadow: 2px 2px #000;
+	width: 260px;
+	height: 50px;
+	margin: auto;
+	top: 10px;
+}
+
+
+/* Main */
+
+.level {
+	top: 230px;
+	width: 140px;
+	color: #aaa;
+}
+
+.level p {
+	position: relative;
+}
+
+#level-singer {
+	left: 530px;
+}
+
+.exp-bar {
+	width: 140px;
+	height: 20px;
+	border: blue solid 1px;
+	top: 270px;
+	background-color: #777;
+}
+
+.exp-bar div {
+	height: 18px;
+	background-color: #05f;
+	top: 1px;
+	left: 1px;
+}
+
+.exp-bar span {
+	position: relative;
+}
+
+#exp-singer {
+	left: 530px;
+}
+
+.exp-notes {
+	top: 225px;
+	width: 50px;
+	height: 70px;
+	color: #0af;
+}
+
+.exp-notes p {
+	position: relative;
+	top: 30px;
+}
+
+#exp-notes-singer {
+	left: 680px;
+}
+
+#singer {
+	border: #555555 solid 2px;
+	background-color: #222;
+	width: 200px;
+	height: 250px;
+	left: 500px;
+	top: 300px;
+	cursor: default;
+}
+
+#singer>p {
+	margin-top: 10px;
+}
+
+
+/* Bottom */
+
+#bottom-section {
+	border-top: black solid 1px;
+	background-color: #1a1a1a;
+	width: 100%;
+	height: 160px;
+	bottom: 0;
+}
+
+#singer-buttons {
+	left: 475px;
+}
+
+.bottom-buttons {
+	width: 250px;
+	height: 100%;
+}
+
+.practice-button {
+	width: 150px;
+	height: 50px;
+	left: 49px;
+	top: 20px;
+}
+
+.practice-bar {
+	background-color: #337;
+	opacity: 0.7;
+	height: 100%;
+	width: 0;
+}
+
+.practice-button p {
+	position: relative;
+}
+
+.venue-text {
+	width: 250px;
+	height: 30px;
+	top: 120px;
+}
+
+
+/* --Windows-- */
+
+.window-container {
+	display: none;
+	width: 800px;
+	height: 500px;
+	top: 144px;
+	left: 200px;
+	background-color: #353535;
+	z-index: 20;
+	border: #454545 solid 2px;
+	border-top: #0a0 solid 2px;
+}
+
+.window-inner {
+	width: 794px;
+	height: 470px;
+	background-color: #222;
+	left: 2px;
+	top: 27px;
+	border: 1px solid grey;
+	border-top: #0a0 solid 1px;
+	overflow-x: hidden;
+}
+
+.container-title {
+	font-size: 20px;
+	color: #0a0;
+	text-shadow: 2px 2px #000
+}
+
+.container-title:hover {
+	cursor: default;
+}
+
+.close {
+	width: 24px;
+	height: 24px;
+	top: 0;
+	right: 0;
+	position: absolute;
+	background-color: #722;
+}
+
+.close:hover {
+	background-color: #700;
+	cursor: pointer;
+}
+
+.close span {
+	top: 0;
+	left: 6px;
+	font-size: 22px;
+	color: black;
+	position: absolute;
+}
+
+.tabs-container {
+	width: 100%;
+	height: 30px;
+	left: 0;
+}
+
+.tab {
+	width: 19.99%;
+	height: 100%;
+	padding-top: 4px;
+	font-size: 18px;
+	background-color: #1e1e1e;
+	border: 1px solid #222;
+	border-bottom: 2px solid #111;
+}
+
+.tab:hover {
+	border-bottom: 1px solid green;
+}
+
+#singer-tab {
+	left: 0;
+}
+
+#guitar-tab {
+	left: 19.99%;
+}
+
+#drums-tab {
+	left: 39.99%;
+}
+
+#bass-tab {
+	right: 19.99%;
+}
+
+#keyboard-tab {
+	right: 0;
+}
+
+
+/* Upgrades */
+
+#upgrade-box-container {
+	width: 99.8%;
+	height: 92%;
+	top: 37px;
+	overflow: auto;
+}
+
+.upgrade-box {
+	width: 92.45%;
+	height: 160px;
+	border-top: #444 solid 2px;
+	border-bottom: #444 solid 2px;
+	top: 20px;
+	left: 30px;
+	margin-bottom: -2px;
+	text-shadow: 1px 1px #000;
+	position: relative !important;
+}
+
+.upgrade-box:first-of-type {
+}
+
+.upgrade-box:last-of-type {}
+
+.upgrade-box h3 {
+	font-size: 20px;
+	color: red;
+}
+
+.upgrade-box img {
+	height: 50px;
+	left: 10px;
+	top: 55px;
+	position: absolute;
+}
+
+.upgrade-button {
+	width: 140px;
+	height: 22px;
+	top: 110px;
+	left: calc(50% - 70px);
+	font-size: 22px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	background-color: #333;
+}
+
+.bonus {
+	position: absolute;
+	top: 45px;
+	left: 100px;
+}
+
+.pricetag {
+	color: grey;
+}
+
+.next {
+	position: absolute;
+	top: 45px;
+	left: 520px;
+}
+
+
+/* Venues */
+
+#venue-showcase {
+	width: auto;
+	height: 468px;
+	overflow-x: hidden;
+	display: flex;
+}
+
+.venue {
+	width: 792px;
+	height: 100%;
+	position: relative !important;
+}
+
+.venue>h2 {
+	margin-top: 10px;
+}
+
+.venue>img {
+	width: 256px;
+	height: 256px;
+}
+
+.perform-button {
+	width: 150px;
+	height: 50px;
+	left: calc(50% - 76px);
+	bottom: 25px;
+}
+
+.arrow-left {
+	left: 30px;
+	top: calc(50% - 20px);
+	display: none;
+}
+
+.arrow-left img {
+	height: 40px;
+	width: 60px;
+}
+
+.arrow-right {
+	right: 30px;
+	top: calc(50% - 20px);
+}
+
+.arrow-right img {
+	height: 40px;
+	width: 60px;
+}
+
+
+/* Studio */
+
+
+/* Skills */
+
+.skill-tree {
+	width: 100%;
+	height: 432px;
+	top: 38px;
+	left: 0;
+}
+
+.genre {
+	width: 33.33%;
+	height: 320px;
+	top: 0;
+	border-bottom: 1px solid #1d1d1d;
+}
+
+.rock {
+	left: 0px;
+	text-align: center;
+	border-right: 1px solid #1d1d1d;
+}
+
+.attributes {
+	left: 20px;
+	width: 75%;
+	text-align: left;
+	border-bottom: 1px dotted #111;
+}
+
+.attributes p {
+	display: inline;
+}
+
+.rock .attributes p {
+	color: #b60;
+	text-shadow: 1px 1px #722;
+}
+
+.blues .attributes p {
+	color: #005;
+	text-shadow: 1px 1px #033;
+}
+
+.jazz .attributes p {
+	color: #000;
+	text-shadow: 1px 1px #722;
+}
+
+.attributes>span {
+	color: #aaa;
+	text-shadow: 2px 1px #000;
+	float: right;
+}
+
+#vibrato {
+	top: 70px;
+}
+
+#dancemoves {
+	top: 100px;
+}
+
+#intonation {
+	top: 70px;
+}
+
+#rhythm {
+	top: 100px;
+}
+
+.blues {
+	left: 33.33%;
+	border-right: 1px solid #1d1d1d;
+}
+
+.jazz {
+	left: 66.66%;
+}
+
+#skills-tip {
+	bottom: 4px;
+	left: 10px;
+}
+
+.skillpointsplus {
+	height: 13px;
+	width: 13px;
+	left: 210px;
+	top: 1px;
+	font-size: 14px;
+	color: yellow;
+	border: 1px solid #777;
+	background-color: black;
+	cursor: pointer;
+	text-align: center;
+}
+
+.skillpointsplus span {
+	position: relative;
+	top: -3px;
+}
+
+.skillpoints {
+	font-size: 16px;
+	color: #aaa;
+	top: 350px;
+	left: 0;
+	cursor: default;
+	position: relative;
+	text-align: center;
+}
+
+.skillpoints span {
+	font-size: 18px;
+	color: yellow;
+}
+
+
+/* Fame */
+
+
+/* --Other-- */
+
+
+/* easteregg */
+
+#egg1 {
+	height: 20px;
+	width: 20px;
+	top: 750px;
+	left: 50px;
+	cursor: pointer;
+	z-index: 5;
+}
+
+#egg2 {
+	height: 20px;
+	width: 20px;
+	top: 750px;
+	right: 50px;
+	cursor: pointer;
+	z-index: 5;
+}
+
+#egg3 {
+	height: 350px;
+	width: 350px;
+	top: 300px;
+	left: 425px;
+	display: none;
+	z-index: 11;
+}

@@ -1,0 +1,61 @@
+
+    vvvvvvvvvvvvvvvvv
+    >-= Changelog =-<
+    ^^^^^^^^^^^^^^^^^
+
+
+Pre 08/02/16 (roughly):
+ '' We pretty much just got the idea and started designing a bit. First on paper, then in HTML/CSS.
+    Later then, we put some javascript in there, starting making windows, planned a bit further for
+    the game, and started getting a bit inspired by trimps. We even contacted the developer and got
+    a few tips and advices from Zach. Cool guy. He's the reason objects.js exists.                  ''
+    
+ - Andy, 21-22/02/16 (wrote it before I forgot how this shit even started. I already forgot the date)
+
+
+08/02/16
+ + Singer skills added (more realistic ones)
+ + Tip in skills
+ + Easter egg
+ 
+09/02/16
+ + Tabs in upgrades menu
+ * Precisioning on upgrade-boxes
+ + Cool scrollbar in upgrades (scrollbar.css works with all divs in #game)
+ + ScrollGuard (prevents scrolling the body when scrolled to bottom of div)
+ + HTML for venues window
+ 
+10/02/16
+ + Some CSS for venues
+ + A cool sliding effect for venues
+ + Included jQuery Transit
+
+11/02/16
+ * A little bit of game balancing
+ + Starting making a load system for loading html from another file (upgrades for now)
+ * Cleaned up some design refreshing (refreshInstruments('guitar') instead of e.g. refreshGuitar() etc.)
+ 
+17/02/16
+ - Load system on hold - too many bugs
+
+19/02/16
+ + Categories in upgrades now functional but needs perfection in css
+ 
+21/02/16
+ * Fixed venue showcase (with cool animation) by changing display to flex - nth-child(x) really wasn't smart
+ * Venue-animation is now working even cooler (fixed by above too)
+ * objects.js now finds amount of venues from the HTML
+ 
+25/02/16
+ + Perform-button moved to venues (one per venue)
+ + Made a div that should later display what you gain per practice
+
+01/03/16
+ * Borders in all windows changed a bit (green bit)
+ * Fixed the borders of upgrades in other categories and other minor design flaws
+ + Made some new plans for later in nextup.txt
+ 
+03/03/16
+ + Added some style to some of the buttons
+ * Changed colors for exp bars and notes
+ + Added a SICK glowing animation for when you level up
