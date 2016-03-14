@@ -1,6 +1,9 @@
 # Bandaram
 This is the source-code for Bandaram (game) all files, images, etc. included.
 
+Preview the latest version here:
+https://preview.c9users.io/citadelseven/bandaram/index.html
+
 #### Disclaimer
 We did not make the <code>jquery.transit.min.js</code> file or any of the images excluding the favicon!
 
@@ -16,3 +19,4 @@ In the <code>style.css</code> file you will find most of the main styling for th
 Look inside <code>changelog.txt</code> to see the latest features added. Not all changes are there, but most of them from 08/02/16 until now is there.
 
 Open <code>nextup.txt</code> to see future ideas and what we need to figure out.
+
